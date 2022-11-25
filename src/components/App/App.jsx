@@ -3,6 +3,7 @@ import './App.css';
 import Axios from 'axios';
 import {useState, useEffect} from 'react';
 import GalleryList from '../GalleryList/GalleryList';
+import AddPictureForm from '../AddPictureForm/AddPictureForm';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <header className="bg-success App-header">
           <h1 className="App-title">My Sweet Pics!</h1>
         </header>
+        <AddPictureForm getGallery={getGallery}/>
         <GalleryList getGallery={getGallery} galleryItems={galleryItems}/>
       </div>
     );
