@@ -4,26 +4,35 @@ import Axios from 'axios';
 
 function GalleryItem(props) {
     const [imgState, setImgState] = useState(true);
+    const [likeState, setLikeState] = useState(false);
 
     const increaseLike = () => {
+        if (likeState) {
+            return;
+        } else {
         Axios.put('/gallery/like/' + props.galleryItem.id)
             .then((response) => {
-                props.getGallery('4');
+                props.getGallery();
             }).catch(err => {
                 alert('error PUTing like:', err)
             });
+        };
     };
 
     return (
-        <div className='galleryItem'>
-            <h3>Gallery Item</h3>
-            
+        <div className='galleryItem'>            
             {imgState ? <img src={props.galleryItem.path} onClick={ ()=> setImgState(!imgState)}/> : <div className="border border-secondary rounded imgDetails" onClick={ ()=> setImgState(!imgState)}> {props.galleryItem.description}</div>}
             
-            <h4>Total Likes: {props.galleryItem.likes}</h4>
-            <div className="btn btn-primary deleteButton"
-                onClick={()=> increaseLike()}
-            >Like?</div>
+            <div className={likeState ? "btn btn-secondary likeButton" : "btn btn-primary likeButton"}
+                onClick={()=> increaseLike() + setLikeState(true)}>
+                {likeState ? "Thank you!" : "I love it!"}
+            </div>
+            <h4>{props.galleryItem.likes > 0 ? 
+                (props.galleryItem.likes === 1 ? 
+                    props.galleryItem.likes + " person loved it!" : 
+                    props.galleryItem.likes + " people loved it!") :
+                ""}
+            </h4>
         </div>
         
     );
