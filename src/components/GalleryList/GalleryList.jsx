@@ -1,5 +1,5 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
-
+import './GalleryList.css'
 
 
 function GalleryList(props) {
@@ -9,10 +9,11 @@ function GalleryList(props) {
     return(
         <>
             <h3>My Tinder Pics</h3>
-
-            {props.galleryItems.map(galleryItem => (
-                <GalleryItem key={galleryItem.id} getGallery={props.getGallery} galleryItem={galleryItem}/>
-            ))}
+            <div className="container pictureHolder">
+                {props.galleryItems.map(galleryItem => (
+                    <GalleryItem key={galleryItem.id} getGallery={props.getGallery} galleryItem={galleryItem}/>
+                ))}
+            </div>
         </>
     )
 };
