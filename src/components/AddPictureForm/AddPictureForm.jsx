@@ -10,7 +10,6 @@ function AddPictureForm (props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('in handlesubmit', urlValue, descriptionValue);
         if (!urlValue || !descriptionValue) {
             alert('Complete all fields!');
             return;
@@ -22,7 +21,6 @@ function AddPictureForm (props) {
     const postPicture = () => {
 
         Axios.post('/gallery', {path: urlValue, description: descriptionValue}).then(response => {
-            console.log('posted');
             props.getGallery();
             setUrlValue('');
             setDescriptionValue('');
@@ -45,8 +43,8 @@ function AddPictureForm (props) {
                         <label id="descriptionLabel" htmlFor="descriptionInput">Description: </label>
                         <textarea id="descriptionInput" type="text" placeholder="brief description of image" cols={22} rows={3} onChange={(e)=>{setDescriptionValue(e.target.value)}} value={descriptionValue}/>
                         <br/>
-                        <button type="submit">Add Picture</button>
-                        <button onClick={() => setViewForm(!viewForm)}>Cancel</button>
+                        <button type="submit" className="btn btn-success">Add Picture</button>
+                        <button className="btn btn-warning" onClick={() => setViewForm(!viewForm)}>Cancel</button>
                     </form> 
                 </div>
                 : <h3 className="clickMe" onClick={() => setViewForm(!viewForm)}>Click here to add your own picture!</h3>
