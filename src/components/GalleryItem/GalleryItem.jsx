@@ -18,7 +18,7 @@ function GalleryItem(props) {
         <div className='galleryItem'>
             <h3>Gallery Item</h3>
             
-            {imgState ? <img src={props.galleryItem.path} onClick={ ()=> setImgState(!imgState)}/> : <div className="imgDetails" onClick={ ()=> setImgState(!imgState)}> {props.galleryItem.description}</div>}
+            {imgState ? <img src={props.galleryItem.path} onClick={ ()=> setImgState(!imgState)}/> : <div className="border border-secondary rounded imgDetails" onClick={ ()=> setImgState(!imgState)}> {props.galleryItem.description}</div>}
             
             <h4>Total Likes: {props.galleryItem.likes}</h4>
             <div className="btn btn-primary deleteButton"

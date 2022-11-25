@@ -12,20 +12,15 @@ function App() {
 
   const getGallery = (arg)=> {Axios.get('/gallery').then((response) => {
     setGalleryItems(response.data);
-    console.log('in getgallery', arg);
   })};
 
   useEffect( () => {getGallery()}, []);
 
 
-
-
-
-
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+        <header className="bg-success App-header">
+          <h1 className="App-title">My Sweet Pics!</h1>
         </header>
         <GalleryList getGallery={getGallery} galleryItems={galleryItems}/>
       </div>
