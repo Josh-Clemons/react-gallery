@@ -1,7 +1,27 @@
 const galleryItems = [
-    { id: 1, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 0 },
-    { id: 2, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 5 },
-    { id: 3, path: 'images/goat_small.jpg', description: 'Photo of a goat taken at Glacier National Park.', likes: 0 }
+    { id: 1, path: 'images/angerranger-and-bluebronco.png', description: 'The Anger Ranger and Blue Bronco wheeling in Gilbert, MN!', likes: 5 },
+    { id: 2, path: 'images/belle-lucy.png', description: 'Our dog Belle with Lucy before she turned into a big crazy.', likes: 0 },
+    { id: 3, path: 'images/ben-at-park.png', description: 'My son Bennett having fun at the park in Mora, MN', likes: 0 },
+    { id: 4, path: 'images/ben-catching-leaves.png', description: 'Ben trying to catch leaves in the fall of 2022', likes: 0 },
+    { id: 5, path: 'images/ben-hunter-in-sami.png', description: 'The boys playing in Dusti\'s wheeling Samuri!', likes: 0 },
+    { id: 6, path: 'images/ben-in-leaves.png', description: 'Benny having a blast playing in the leaf pile', likes: 0 },
+    { id: 7, path: 'images/ben-josh-park.png', description: 'Me and the tyrant having fun at the park! Summer `22', likes: 0 },
+    { id: 8, path: 'images/ben-lady.png', description: 'One of the few pictures we have with Ben and our dog Lady before she passed.', likes: 0 },
+    { id: 9, path: 'images/ben-lucy.png', description: 'Benny having fun playing with Lucy!!!', likes: 0 },
+    { id: 10, path: 'images/boat-party.png', description: 'Fun snorkling trip in the Dominican Republic!', likes: 0 },
+    { id: 11, path: 'images/dartboard.png', description: 'A dartboard case I made for my GranBoard. Solid walnut with a laser etched tribute to our dog Lady.', likes: 0 },
+    { id: 12, path: 'images/ebola-proof.png', description: 'Funny Ebola-Proof costume I made several years ago, was actually useful in 2020.....', likes: 0 },
+    { id: 13, path: 'images/Fam-in-black-white.png', description: 'A really nice photo of Jenni, Bennett, and myself.', likes: 0 },
+    { id: 14, path: 'images/fam-in-tanya.png', description: 'The whole fam testing the seats in the new off-road rig.', likes: 0 },
+    { id: 15, path: 'images/fat-pants-friday.png', description: '6Smith in Wayzata does a Fat Pants Friday, 3,000+ calories and always an asparagus so you get your vegetables!', likes: 0 },
+    { id: 16, path: 'images/fishing-double.png', description: 'Photo of a goat taken at Glacier National Park.', likes: 0 },
+    { id: 17, path: 'images/herc-hill.png', description: 'Hercules Hill in Gilbert, MN. A fun and steep hill to take our trucks up, you will notice the trail in the bottom of the picture.', likes: 0 },
+    { id: 18, path: 'images/jen-and-i.png', description: 'Jen and I walking a trail somewhere in the woods.', likes: 0 },
+    { id: 19, path: 'images/lucy-silly.png', description: 'Lucy being silly!', likes: 0 },
+    { id: 20, path: 'images/smoker-with-wings.png', description: 'I love cooking on the pellet smoker, here are some wings I made recently.', likes: 0 },
+    { id: 21, path: 'images/snowmobiles.png', description: 'I enjoy living outside of the city so we can drive our snowmobiles right to the trails!', likes: 0 },
+    { id: 22, path: 'images/tanya.png', description: 'The off-road truck I am working on building now. Geo Tracker body on a custom frame.', likes: 0 },
+    { id: 23, path: 'images/tinaaa.png', description: 'My old truck I used for wheeling, long live TINNAAAAAAAA!!!!!', likes: 0 },
 ];
 
 module.exports = galleryItems;
