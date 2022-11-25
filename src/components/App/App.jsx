@@ -10,8 +10,9 @@ function App() {
 
   const [galleryItems, setGalleryItems] = useState([]);
 
-  const getGallery = ()=> {Axios.get('/gallery').then((response) => {
+  const getGallery = (arg)=> {Axios.get('/gallery').then((response) => {
     setGalleryItems(response.data);
+    console.log('in getgallery', arg);
   })};
 
   useEffect( () => {getGallery()}, []);

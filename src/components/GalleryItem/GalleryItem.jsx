@@ -1,9 +1,18 @@
 import './GalleryItem.css'
 import { useState } from 'react';
+import Axios from 'axios';
 
 function GalleryItem(props) {
     const [imgState, setImgState] = useState(true);
-    const [likeCount, setLikeCount] = useState(props.galleryItem.likes);
+
+    const increaseLike = () => {
+        Axios.put('/gallery/like/' + props.galleryItem.id)
+            .then((response) => {
+                props.getGallery('4');
+            }).catch(err => {
+                alert('error PUTing like:', err)
+            });
+    };
 
     return (
         <div className='galleryItem'>
@@ -11,9 +20,9 @@ function GalleryItem(props) {
             
             {imgState ? <img src={props.galleryItem.path} onClick={ ()=> setImgState(!imgState)}/> : <div className="imgDetails" onClick={ ()=> setImgState(!imgState)}> {props.galleryItem.description}</div>}
             
-            <h4>Total Likes: {likeCount}</h4>
+            <h4>Total Likes: {props.galleryItem.likes}</h4>
             <div className="btn btn-primary deleteButton"
-                onClick={()=> setLikeCount(likeCount +1)}
+                onClick={()=> increaseLike()}
             >Like?</div>
         </div>
         
