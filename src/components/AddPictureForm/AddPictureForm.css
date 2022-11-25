@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.addPictureTrue {
+    background-color: blanchedalmond;
+}
+
 .inputForm label {
     width: 100px;
     text-align: right;
