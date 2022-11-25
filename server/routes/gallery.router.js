@@ -19,7 +19,7 @@ router.put('/like/:id', (req, res) => {
 
 // GET Route
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM pictures ORDER BY id;`;
+    const queryText = `SELECT * FROM pictures ORDER BY created_date DESC, id;`;
 
     pool.query(queryText).then((results) => {
         res.send(results.rows);
@@ -29,5 +29,20 @@ router.get('/', (req, res) => {
     })
     
 }); // END GET Route
+
+
+// POST Route
+router.post('/', (req, res) => {
+    const queryText = 'INSERT INTO pictures (path, description) VALUES($1, $2);';
+
+    pool.query(queryText, [req.body.path, req.body.description]).then(()=>{
+        res.sendStatus(201);
+        console.log('POST successful');
+    }).catch((error)=> {
+        alert('error POSTing', error);
+    });
+});
+
+
 
 module.exports = router;

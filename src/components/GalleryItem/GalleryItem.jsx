@@ -23,7 +23,7 @@ function GalleryItem(props) {
         <div className='galleryItem'>            
             {imgState ? <img src={props.galleryItem.path} onClick={ ()=> setImgState(!imgState)}/> : <div className="border border-secondary rounded imgDetails" onClick={ ()=> setImgState(!imgState)}> {props.galleryItem.description}</div>}
             
-            <div className={likeState ? "btn btn-secondary likeButton" : "btn btn-primary likeButton"}
+            <div className={likeState ? "m-2 btn btn-secondary likeButton" : "m-2 btn btn-primary likeButton"}
                 onClick={()=> increaseLike() + setLikeState(true)}>
                 {likeState ? "Thank you!" : "I love it!"}
             </div>

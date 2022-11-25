@@ -36,3 +36,7 @@
     color: white;
     background-color: rgb(113, 23, 41);
 }
+
+.clickMe:hover {
+    cursor: pointer;
+}
