@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
     }).catch((error)=> {
         alert('error POSTing', error);
     });
-});
+}); // END POST route
 
 
 
