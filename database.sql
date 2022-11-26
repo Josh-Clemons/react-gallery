@@ -27,7 +27,7 @@ VALUES
     ('images/Fam-in-black-white.png', 'A really nice photo of Jenni, Bennett, and myself.', 0, '2022-11-24'  ),
     ('images/fam-in-tanya.png', 'The whole fam testing the seats in the new off-road rig.', 0, '2022-11-24'  ),
     ('images/fat-pants-friday.png', '6Smith in Wayzata does a Fat Pants Friday, 3,000+ calories and always an asparagus so you get your vegetables!', 0, '2022-11-24'  ),
-    ('images/fishing-double.png', 'Photo of a goat taken at Glacier National Park.', 0, '2022-11-24'  ),
+    ('images/fishing-double.png', 'Matt and Kyle hooking up at the same time, what a fun trip!', 0, '2022-11-24'  ),
     ('images/herc-hill.png', 'Hercules Hill in Gilbert, MN. A fun and steep hill to take our trucks up, you will notice the trail in the bottom of the picture.', 0, '2022-11-24'  ),
     ('images/jen-and-i.png', 'Jen and I walking a trail somewhere in the woods.', 0, '2022-11-24'  ),
     ('images/lucy-silly.png', 'Lucy being silly!', 0, '2022-11-24'  ),
