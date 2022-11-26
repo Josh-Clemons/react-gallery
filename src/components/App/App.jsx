@@ -7,6 +7,7 @@ import AddPictureForm from '../AddPictureForm/AddPictureForm';
 
 
 
+
 function App() {
 
   const [galleryItems, setGalleryItems] = useState([]);
@@ -20,11 +21,13 @@ function App() {
 
     return (
       <div className="App">
-        <header className="bg-success App-header">
-          <h1 className="App-title">My Sweet Pics!</h1>
-        </header>
-        <AddPictureForm getGallery={getGallery}/>
-        <GalleryList getGallery={getGallery} galleryItems={galleryItems}/>
+        <div className="cork">
+          {/* <header className="bg-success App-header">
+            <h1 className="App-title">My Sweet Pics!</h1>
+          </header> */}
+          <AddPictureForm getGallery={getGallery}/>
+          <GalleryList getGallery={getGallery} galleryItems={galleryItems}/>
+        </div>
       </div>
     );
 };

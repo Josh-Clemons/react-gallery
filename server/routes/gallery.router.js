@@ -13,6 +13,7 @@ router.put('/like/:id', (req, res) => {
         res.sendStatus(200);
     }).catch(error => {
         alert('error PUTting to DB', error);
+        res.sendStatus(500);
     });
 
 }); // END PUT Route
@@ -24,7 +25,7 @@ router.get('/', (req, res) => {
     pool.query(queryText).then((results) => {
         res.send(results.rows);
     }).catch((error) => {
-        alert('error GETting from DB', error);
+        console.log('error GETting from DB', error);
         res.sendStatus(500);
     })
     
@@ -39,10 +40,24 @@ router.post('/', (req, res) => {
         res.sendStatus(201);
         console.log('POST successful');
     }).catch((error)=> {
-        alert('error POSTing', error);
+        console.log('error POSTing', error);
+        res.sendStatus(500);
     });
 }); // END POST route
 
+// DELETE Router
+router.delete ('/:id', (req, res) => {
+    const itemId = req.params.id
+    const queryText = 'DELETE FROM pictures where "id"=$1;';
+
+    pool.query(queryText, [itemId]).then((results) => {
+        res.sendStatus(200);
+        console.log('DELETE successful');
+    }).catch((error) => {
+        console.log('error DELETING', error);
+        res.sendStatus(500);
+    });
+});
 
 
 module.exports = router;

@@ -40,7 +40,7 @@ function AddPictureForm (props) {
                         <label htmlFor="urlInput">URL: </label>
                         <input id="urlInput" type="text" placeholder="paste URL here" onChange={(e)=>{setUrlValue(e.target.value)}} value={urlValue}/>
                         <br/>
-                        <label id="descriptionLabel" htmlFor="descriptionInput">Description: </label>
+                        <label id="descriptionLabel">Description: </label>
                         <textarea id="descriptionInput" type="text" placeholder="brief description of image" cols={22} rows={3} onChange={(e)=>{setDescriptionValue(e.target.value)}} value={descriptionValue}/>
                         <br/>
                         <button type="submit" className="btn btn-success">Add Picture</button>
