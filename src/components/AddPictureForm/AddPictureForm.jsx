@@ -47,12 +47,6 @@ function AddPictureForm(props) {
                             sx={{ bgcolor: 'white'}}
                             width={180}
                         />
-
-
-                        {/* <label htmlFor="urlInput">URL: </label>
-                        <input id="urlInput" type="text" placeholder="paste URL here" onChange={(e) => { setUrlValue(e.target.value) }} value={urlValue} />
-                        <br /> */}
-
                         <TextField
                             id="descriptionInput"
                             placeholder="Brief description here"
@@ -62,9 +56,6 @@ function AddPictureForm(props) {
                             value={descriptionValue}
                             sx={{ bgcolor: 'white' }}                     
                         />
-                        {/* <label id="descriptionLabel">Description: </label>
-                        <textarea id="descriptionInput" type="text" placeholder="brief description of image" cols={22} rows={3} onChange={(e)=>{setDescriptionValue(e.target.value)}} value={descriptionValue}/> */}
-
                         <br />
                         <button type="submit" className="btn btn-success">Add Picture</button>
                         <button className="btn btn-warning" onClick={() => setViewForm(!viewForm)}>Cancel</button>
