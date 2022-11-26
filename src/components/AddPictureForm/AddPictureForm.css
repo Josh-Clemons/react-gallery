@@ -16,12 +16,12 @@
 }
 
 .inputForm input {
-    width: 200px;
+    width: 175px;
 }
 
-.inputForm textarea {
+/* .inputForm textarea {
     width: 200px;
-}
+} */
 
 .inputForm button {
     margin: 2px 10px 10px 10px;
@@ -30,7 +30,7 @@
 .addPictureDiv .addPictureTrue {
     border: 2px solid gray;
     border-radius: 10px;
-    width: 350px;
+    width: 300px;
 }
 
 .clickMe {

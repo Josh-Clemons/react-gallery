@@ -22,9 +22,6 @@ function App() {
     return (
       <div className="App">
         <div className="cork">
-          {/* <header className="bg-success App-header">
-            <h1 className="App-title">My Sweet Pics!</h1>
-          </header> */}
           <AddPictureForm getGallery={getGallery}/>
           <GalleryList getGallery={getGallery} galleryItems={galleryItems}/>
         </div>
