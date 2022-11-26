@@ -12,7 +12,7 @@ function AddPictureForm(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!urlValue || !descriptionValue) {
-            alert('Complete all fields!');
+            Swal.fire('Please complete all fields');
             return;
         } else {
             postPicture();
