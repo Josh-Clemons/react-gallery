@@ -3,12 +3,15 @@ import { useState, useEffect } from "react";
 import './AddPictureForm.css';
 import TextField from '@mui/material/TextField';
 
+
+// this is the element on the top part of the page used to add pictures to the gallery
 function AddPictureForm(props) {
 
     const [viewForm, setViewForm] = useState(false);
     const [urlValue, setUrlValue] = useState('');
     const [descriptionValue, setDescriptionValue] = useState('');
 
+    // hanldeSubmit verifies fields are completed before calling postPicture()
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!urlValue || !descriptionValue) {
@@ -19,8 +22,8 @@ function AddPictureForm(props) {
         };
     };
 
+    // sends new picture details to DB via API, then requests the updated data from the DB
     const postPicture = () => {
-
         Axios.post('/gallery', { path: urlValue, description: descriptionValue }).then(response => {
             props.getGallery();
             setUrlValue('');
@@ -32,6 +35,7 @@ function AddPictureForm(props) {
     };
 
 
+    // returns form for entering a new picture, requires user to click on a banner item before form opens
     return (
         <div className="addPictureDiv">
             {(viewForm) ?

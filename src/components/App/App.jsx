@@ -12,6 +12,7 @@ function App() {
 
   const [galleryItems, setGalleryItems] = useState([]);
 
+  // get request for grabbing the gallery from the DB. This function is passed as a prop to several components.
   const getGallery = (arg)=> {Axios.get('/gallery').then((response) => {
     setGalleryItems(response.data);
   })};
