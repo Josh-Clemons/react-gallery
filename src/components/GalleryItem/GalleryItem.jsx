@@ -6,6 +6,8 @@ function GalleryItem(props) {
     const [imgState, setImgState] = useState(true);
     const [likeState, setLikeState] = useState(false);
 
+    // When like button clicked, checks to see if user previously liked a photo (likeState), then 
+    // sends put API to server to increase like count
     const increaseLike = () => {
         if (likeState) {
             return;
@@ -19,6 +21,7 @@ function GalleryItem(props) {
         };
     };
 
+    // function for deleting photo, fires a sweetalert confirmation asking user to confirm
     const deletePhoto = () => {
         Swal.fire({
             title: 'Are you sure you want to delete?',
@@ -43,9 +46,14 @@ function GalleryItem(props) {
 
 
 
+    // returns the gallery item in the form of a polaroid. Includes a like button that changes
+    // if a person clicks on it. Also includes a delete button for removing the photo.
+    // Lastly there is a counter on the bottom of the element to show how many people liked the photo
     return (
         <div className='galleryItem'>
-            {imgState ? <img src={props.galleryItem.path} onClick={() => setImgState(!imgState)} /> : <div className="imgDetails" onClick={() => setImgState(!imgState)}> {props.galleryItem.description}</div>}
+            {imgState ? <img src={props.galleryItem.path} onClick={() => setImgState(!imgState)} /> 
+                : <div className="imgDetails" onClick={() => setImgState(!imgState)}> {props.galleryItem.description}</div>
+            }
 
             <div className='buttonHolder'>
                 <div className={likeState ? "m-1 p-1 btn btn-secondary likeButton" : "m-1 p-1 btn btn-primary likeButton"}
@@ -54,6 +62,7 @@ function GalleryItem(props) {
                 </div>
                 <div className='btn btn-danger m-1 p-1' onClick={() => deletePhoto()}>Delete</div>
             </div>
+
             <div className='lovedItText'>{props.galleryItem.likes > 0 ?
                 (props.galleryItem.likes === 1 ?
                     props.galleryItem.likes + " person loved it!" :

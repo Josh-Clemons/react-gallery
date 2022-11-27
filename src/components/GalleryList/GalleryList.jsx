@@ -5,7 +5,8 @@ import './GalleryList.css'
 function GalleryList(props) {
 
 
-
+    // This component maps over the database items and sends each one to
+    // the galleryItem component. Where it is made into a polaroid replica.
     return(
         <>
             <div className="container pictureHolder">
